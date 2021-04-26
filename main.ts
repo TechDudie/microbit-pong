@@ -1,5 +1,5 @@
 input.onButtonPressed(Button.A, function () {
-    paddle.change(LedSpriteProperty.X, 0 - 1)
+    paddle.change(LedSpriteProperty.X, -1)
 })
 input.onButtonPressed(Button.B, function () {
     paddle.change(LedSpriteProperty.X, 1)
@@ -15,6 +15,13 @@ if (Math.randomBoolean()) {
 basic.forever(function () {
     ball.move(1)
     ball.ifOnEdgeBounce()
+    if (ball.isTouching(paddle)) {
+        if (ball.get(LedSpriteProperty.Direction) < 0) {
+            ball.turn(Direction.Right, 90)
+        } else {
+            ball.turn(Direction.Left, 90)
+        }
+    }
     if (ball.get(LedSpriteProperty.Y) == 4) {
         game.pause()
         basic.pause(1000)
