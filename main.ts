@@ -16,6 +16,7 @@ basic.forever(function () {
     ball.move(1)
     ball.ifOnEdgeBounce()
     if (ball.isTouching(paddle)) {
+        game.addScore(1)
         if (ball.get(LedSpriteProperty.Direction) < 0) {
             ball.turn(Direction.Right, 90)
         } else {
@@ -25,7 +26,7 @@ basic.forever(function () {
     if (ball.get(LedSpriteProperty.Y) == 4) {
         game.pause()
         basic.pause(1000)
-        basic.showString("GAME OVER")
+        basic.showString("GAME OVER    SCORE: " + game.score())
     }
     basic.pause(1000)
 })
