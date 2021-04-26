@@ -15,5 +15,10 @@ if (Math.randomBoolean()) {
 basic.forever(function () {
     ball.move(1)
     ball.ifOnEdgeBounce()
+    if (ball.get(LedSpriteProperty.Y) == 4) {
+        game.pause()
+        basic.pause(1000)
+        basic.showString("GAME OVER")
+    }
     basic.pause(1000)
 })
