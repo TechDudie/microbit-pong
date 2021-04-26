@@ -1,3 +1,6 @@
+# microbit-pong
+
+Pong for Microbit.
 
 > Open this page at [https://techdudie.github.io/microbit-pong/](https://techdudie.github.io/microbit-pong/)
 
@@ -15,7 +18,7 @@ This repository can be added as an **extension** in MakeCode.
 To edit this repository in MakeCode.
 
 * open [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* click on **Import** then click on **Import URL**
+* click on **Import** then click on **Import URL**.
 * paste **https://github.com/techdudie/microbit-pong** and click import
 
 ## Blocks preview
